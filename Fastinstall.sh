@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-cd $HOME/Spyder
+cd $HOME/Stam
 rm -rf $HOME/.telegram-cli
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x Spyder
+chmod +x Stam
 chmod +x ts
 ./ts
 }
