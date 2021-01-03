@@ -5,8 +5,8 @@ install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
 chmod +x Stam
-chmod +x ts
-./ts
+chmod +x AsH
+./AsH
 }
 if [ "$1" = "ins" ]; then
 install
