@@ -8980,7 +8980,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 ☑️┇مجوهراتي -› لعرض عدد الارباح
 ☑️┇بيع مجوهراتي + العدد
 ••┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉••
-☑️┇Ch TeAM -› [@Stam](t.me/Sbyder)
+☑️┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Teext)
                 end
@@ -9300,8 +9300,8 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
                     send(msg.chat_id_, msg.id_, '*☑️┇تم التحديث السورس*')
                     os.execute('rm -rf Stam.lua')
                     os.execute('rm -rf start.lua')
-                    os.execute('wget https://raw.githubusercontent.com/StamTele/Stam/master/Stam.lua')
-                    os.execute('wget https://raw.githubusercontent.com/StamTele/Stam/master/start.lua')
+                    os.execute('wget https://raw.githubusercontent.com/Stamte/Stam/master/Stam.lua')
+                    os.execute('wget https://raw.githubusercontent.com/Stamte/Stam/master/start.lua')
                     dofile('Stam.lua')
                     return false
                 end
@@ -9320,7 +9320,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
                         t = t .. i .. "-  " .. v .. " \n"
                     end
                     send(msg.chat_id_, msg.id_, t ..
-                        '*ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ*\n*📬┇اضغط على الاسم ليتم نسخه*\n*📌┇تابع جديدنا : @Sbyder*')
+                        '*ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ*\n*📬┇اضغط على الاسم ليتم نسخه*\n*📌┇تابع جديدنا : @ufuuu*')
                 end
                 if text and text:match("^احسب (.*)$") and database:get(bot_id .. "Stam:age_Bots" .. msg.chat_id_) ==
                     "open" then
@@ -9483,7 +9483,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
                 if text == "متجر الملفات" or text == 'المتجر' then
                     if DevStam(msg) then
                         local Get_Files, res = https.request(
-                                                   "https://raw.githubusercontent.com/StamTele/files_Stam/master/getfile.json")
+                                                   "https://raw.githubusercontent.com/Stamte/files_Stam/master/getfile.json")
                         if res == 200 then
                             local Get_info, res = pcall(JSON.decode, Get_Files);
                             vardump(res.plugins_)
@@ -9529,7 +9529,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
                                 file .. "} \n💥*"
                     end
                     local json_file, res = https.request(
-                                               "https://raw.githubusercontent.com/StamTele/files_Stam/master/files_Stam/" ..
+                                               "https://raw.githubusercontent.com/Stamte/files_Stam/master/files_Stam/" ..
                                                    file)
                     if res == 200 then
                         os.execute("rm -fr Stam_Files/" .. file)
@@ -9555,7 +9555,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
                                 "}\n☑️┇ تم تنزيله وتفعيله بنجاح \n💥*"
                     end
                     local json_file, res = https.request(
-                                               "https://raw.githubusercontent.com/StamTele/files_Stam/master/files_Stam/" ..
+                                               "https://raw.githubusercontent.com/Stamte/files_Stam/master/files_Stam/" ..
                                                    file)
                     if res == 200 then
                         local chek = io.open("Stam_Files/" .. file, 'w+')
@@ -9646,30 +9646,13 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 
 𓂅 *. Stam TeAM *
 *••┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉••*
-𓂅 . [Source Channel .](https://t.me/Sbyder/16)
+𓂅 . [Source Channel .](https://t.me/ufuuu)
 
-𓂅 . [Files Channel .](https://t.me/pqqqr/6)
+𓂅 . [Files Channel .](https://t.me/planther)
 
-𓂅 . [The Developer .](https://t.me/VlVlVI)
+𓂅 . [The Developer .](https://t.me/x111x)
 *••┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉••*
-𓂅 . [Bot TwsL Dev .](https://t.me/Y_8ibot)
-]]
-                    send(msg.chat_id_, msg.id_, Text)
-                end
-                if text == 'رابط الحذف' or text == 'بوت الحذف' or text == 'رابط حذف' then
-                    if AddChannel(msg.sender_user_id_) == false then
-                        local textchuser = database:get(bot_id .. 'text:ch:user')
-                        if textchuser then
-                            send(msg.chat_id_, msg.id_, '[' .. textchuser .. ']')
-                        else
-                            send(msg.chat_id_, msg.id_,
-                                '• اهلا بك عزيزي ❗️\n• لايمكنك استخدام البوت ❕\n• عليك الاشتراك في القناة ❗️\n• [' ..
-                                    database:get(bot_id .. 'add:ch:username') .. '] • ⚜️')
-                        end
-                        return false
-                    end
-                    Text = [[*🔰┇بوت حذف الحسابات*
-*💢┇ معرف البوت : @Y_2ibot*
+𓂅 . [Bot TwsL Dev .](https://t.me/bbbblbot)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                 end
@@ -9700,7 +9683,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 
 🔧┇م6 -› اوآمر مطور اساسي
  ••┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉••
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -9749,7 +9732,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 🔖┇الكلايش
 🔖┇السيلفي
 ••┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉•• 
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -9802,7 +9785,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 
 ♦️┇ضع تكرار + العدد
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -9860,7 +9843,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 🔗┇مسح المطرودين
 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -9912,7 +9895,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 🗣️┇ تفعيل/تعطيل اوامر التحشيش
 🗣️┇ تفعيل/تعطيل الرابط/جلب الرابط
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -9967,7 +9950,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 📌┇ لعمل تاك للكل ~ all@ او all
 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -10027,7 +10010,7 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
 🔍┇رفع النسخه الاحتياطيه
 🗃️┇السيرفر / معلومات السيرفر 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇Ch TeAM -› [@Stam](t.me/Sbyder)
+🔘┇Ch TeAM -› [@Stam](t.me/ufuuu)
 ]]
                     send(msg.chat_id_, msg.id_, Text)
                     return false
@@ -10867,8 +10850,8 @@ echo '*———————————~*\n*⏳┇مـده تـشغيـل ال�
                     send(msg.chat_id_, msg.id_, '*☑️┇تم تحديث السورس*')
                     os.execute('rm -rf Stam.lua')
                     os.execute('rm -rf start.lua')
-                    os.execute('wget https://raw.githubusercontent.com/StamTele/Stam/master/Stam.lua')
-                    os.execute('wget https://raw.githubusercontent.com/StamTele/Stam/master/start.lua')
+                    os.execute('wget https://raw.githubusercontent.com/Stamte/Stam/master/Stam.lua')
+                    os.execute('wget https://raw.githubusercontent.com/Stamte/Stam/master/start.lua')
                     dofile('Stam.lua')
                     return false
                 end
